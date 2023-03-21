@@ -44,6 +44,6 @@ app.delete('/deleteArtist', (req, res) => {
   })
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Running the server on port: ${PORT}`);
 })
