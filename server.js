@@ -3,7 +3,6 @@ const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const PORT = 8000
-const NODE_VERSION = '14.20.1'
 
 let db;
 let dbConnectionStr = 'mongodb+srv://favartists:katebush@favartists.ywtugoc.mongodb.net/?retryWrites=true&w=majority'
