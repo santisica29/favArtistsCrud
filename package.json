@@ -18,5 +18,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santisica29/favArtistsCrud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/santisica29/favArtistsCrud/issues"
+  },
+  "homepage": "https://github.com/santisica29/favArtistsCrud#readme"
 }
