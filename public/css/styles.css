@@ -1,0 +1,44 @@
+
+
+h1 {
+  color: purple;
+  text-align: center;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+}
+
+li {
+  margin-bottom: .4rem;
+}
+
+form {
+  display: table;
+  margin: auto;
+}
+
+input[type='submit']{
+  background-color: black;
+  color: wheat;
+  padding: .4rem 1rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type='submit']:hover {
+  box-shadow: 0 0 12px 5px rgb(23, 23, 34);
+}
+
+.del {
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(209, 17, 17);
+  color: black;
+  cursor: pointer;
+}
+.del:hover {
+  background-color: red;
+}

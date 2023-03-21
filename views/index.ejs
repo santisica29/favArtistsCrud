@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite Artists</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1>My Favorite Artists</h1>
+    <ul class="artists">
+      <% for(let i = 0; i < artists.length; i++) {%>
+      <li class="artist">
+        <span><%= artists[i].artistName %></span>
+        <button type="button" class="del">delete</button>
+      </li>
+      <% } %>
+    </ul>
+
+    <form action="/addArtist" method="POST">
+      <fieldset>
+        <legend>Enter your favorite artists:</legend>
+
+        <label for="artName">Name</label>
+        <input type="text" id="artName" name="artistName"/>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+    <script src="js/main.js"></script>
+  </body>
+</html>
