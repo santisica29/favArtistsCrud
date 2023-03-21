@@ -6,7 +6,7 @@ const PORT = 8000
 
 let db;
 let dbConnectionStr = 'mongodb+srv://favartists:katebush@favartists.ywtugoc.mongodb.net/?retryWrites=true&w=majority'
-let dbName = 'favartists'
+let dbName = 'FavArtists'
 
 MongoClient.connect(dbConnectionStr, {useUnifiedTopology: true})
   .then(client => {
