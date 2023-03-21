@@ -6,7 +6,7 @@ const PORT = 8000
 
 let db;
 let dbConnectionStr = 'mongodb+srv://favartists:katebush@favartists.ywtugoc.mongodb.net/?retryWrites=true&w=majority'
-let dbName = 'FavArtists'
+let dbName = 'favartists'
 
 MongoClient.connect(dbConnectionStr, {useUnifiedTopology: true})
   .then(client => {
@@ -20,7 +20,7 @@ app.use(urlencoded({ extended: true }))
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  db.collection('favArtists').find().toArray()
+  db.collection('favartists').find().toArray()
   .then(data => {
     res.render('index.ejs', { artists: data })
   })
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/addArtist', (req, res) => {
-  db.collection('favArtists').insertOne(req.body)
+  db.collection('favartists').insertOne(req.body)
   .then(result => {
     console.log('Artist Added')
     res.redirect('/')
@@ -37,7 +37,7 @@ app.post('/addArtist', (req, res) => {
 })
 
 app.delete('/deleteArtist', (req, res) => {
-  db.collection('favArtists').deleteOne({artistName: req.body.artistName})
+  db.collection('favartists').deleteOne({artistName: req.body.artistName})
   .then(result => {
     console.log('Artist Deleted');
     res.json('Artist Deleted')
